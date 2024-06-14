@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
   import { PageLayout } from './components/PageLayout';
-  import {  scopesNeeded } from './authConfig';
+  import { loginRequest } from './authConfig';
   import { callMsGraph } from './graph';
   import { ProfileData } from './components/ProfileData';
 
@@ -23,7 +23,7 @@ const ProfileContent = () => {
       // Silently acquires an access token which is then attached to a request for MS Graph data
       instance
           .acquireTokenSilent({
-              ...scopesNeeded,
+              ...loginRequest,
               account: accounts[0],
           })
           .then((response) => {
