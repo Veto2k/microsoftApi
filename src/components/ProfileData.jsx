@@ -8,12 +8,17 @@ export const ProfileData = (props) => {
     // props.graphData.value[0].fields.id
  
     <table className="table">
-      <tr>
+      
+      <thead>
+      <tr> 
         <th>ID</th>
         <th>Name</th>
         <th>DOB</th>
         <th>Phone No</th>
       </tr>
+      </thead>
+      
+      <tbody>
       <tr>
         <td>{props.graphData.value[0].fields.id}</td>
         <td>{props.graphData.value[0].fields.Name}</td>
@@ -31,7 +36,8 @@ export const ProfileData = (props) => {
         <td>{props.graphData.value[2].fields.Name}</td>
         <td>{props.graphData.value[2].fields.DOB}</td>
         <td>{props.graphData.value[2].fields.PhoneNo}</td>
-      </tr>            
+      </tr>
+      </tbody>            
     </table>
 
   );
